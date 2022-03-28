@@ -167,7 +167,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -176,7 +175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb3b0edca3b24e54c99dc0381c7f83eb, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -232,8 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b3d672f0cbdae4c946f07b2ce076f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 0
-  moduleContainers: {fileID: 321446238}
+  moduleComponetList: {fileID: 0}
   interactionTypes:
     list:
     - {fileID: 11400000, guid: c23ad497a5be76249bafc124eaa24fd7, type: 2}
@@ -246,20 +244,20 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e2e13f20ed445f047affe2e1ca12f692, type: 2}
     - {fileID: 11400000, guid: 7788ebe365481234d92b1fb0dd557b32, type: 2}
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   isFirstReset: 0
 --- !u!1 &80671801
 GameObject:
@@ -318,7 +316,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -327,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27aead57e412b164eb9a970343a0808d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -400,7 +397,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -517,7 +513,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -526,7 +521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ecfdb09fd641444abad1af92b35b84e, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -584,62 +579,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  runContinuousDetection: 0
   detectionUpdateRate: 0.1
   sensors:
   - interactionTypes:
     - {fileID: 11400000, guid: 6715884f50fbb3b468740aab06ceaf12, type: 2}
     modifiers: []
   detectedInteractables:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 1821491681}
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableDetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableUndetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
+  runContinuousDetection: 0
   interactablesInRange:
     list: []
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -703,7 +696,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -712,7 +704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27aead57e412b164eb9a970343a0808d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -815,7 +807,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -867,7 +858,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  runContinuousDetection: 0
   detectionUpdateRate: -1
   sensors:
   - interactionTypes:
@@ -875,55 +865,54 @@ MonoBehaviour:
     modifiers:
     - {fileID: 11400000, guid: b7bdc2086751d0241b92b5da86ce1354, type: 2}
   detectedInteractables:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 1821491681}
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableDetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableUndetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
+  runContinuousDetection: 0
   interactablesInRange:
     list: []
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -932,12 +921,12 @@ MonoBehaviour:
   maxDistance: 35
   currentHitObject: {fileID: 0}
   onRaycastEnterEvent:
-    debugging: 0
+    debugGameEvent: 0
     onEventRaised:
       m_PersistentCalls:
         m_Calls: []
   onRaycastExitEvent:
-    debugging: 0
+    debugGameEvent: 0
     onEventRaised:
       m_PersistentCalls:
         m_Calls: []
@@ -984,7 +973,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1055,62 +1043,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  runContinuousDetection: 0
   detectionUpdateRate: 0.1
   sensors:
   - interactionTypes:
     - {fileID: 11400000, guid: e2e13f20ed445f047affe2e1ca12f692, type: 2}
     modifiers: []
   detectedInteractables:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 0}
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableDetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableUndetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
+  runContinuousDetection: 0
   interactablesInRange:
     list: []
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1142,7 +1128,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1151,7 +1136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3194c1c2676d1c143a7b8993cbe1a6e4, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1241,7 +1226,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1250,7 +1234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb3b0edca3b24e54c99dc0381c7f83eb, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1306,8 +1290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b3d672f0cbdae4c946f07b2ce076f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 0
-  moduleContainers: {fileID: 321446238}
+  moduleComponetList: {fileID: 0}
   interactionTypes:
     list:
     - {fileID: 11400000, guid: c23ad497a5be76249bafc124eaa24fd7, type: 2}
@@ -1320,20 +1303,20 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e2e13f20ed445f047affe2e1ca12f692, type: 2}
     - {fileID: 11400000, guid: 7788ebe365481234d92b1fb0dd557b32, type: 2}
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   isFirstReset: 0
 --- !u!1 &995026917
 GameObject:
@@ -1367,7 +1350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  runContinuousDetection: 1
   detectionUpdateRate: 0.1
   sensors:
   - interactionTypes:
@@ -1377,55 +1359,54 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ee2e60bb89a38be42aec3caaa9a52b5a, type: 2}
     - {fileID: 11400000, guid: b7bdc2086751d0241b92b5da86ce1354, type: 2}
   detectedInteractables:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 1821491681}
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableDetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableUndetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1457,7 +1438,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1466,7 +1446,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f52d5ac590e8e764789c4f9a9bc1fa58, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1579,62 +1559,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  runContinuousDetection: 0
   detectionUpdateRate: 0.1
   sensors:
   - interactionTypes:
     - {fileID: 11400000, guid: e3a9f7b89984bc8478b37b6c65f1ee7c, type: 2}
     modifiers: []
   detectedInteractables:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 1821491681}
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableDetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
   onInteractableUndetected:
-    m_PersistentCalls:
-      m_Calls: []
+    raisedBodyTag:
+      m_PersistentCalls:
+        m_Calls: []
+    raisedDetectedInteractable:
+      m_PersistentCalls:
+        m_Calls: []
+  runContinuousDetection: 0
   interactablesInRange:
     list: []
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1666,7 +1644,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1675,7 +1652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f9bc60224972bf44bb9d14c8c642ab17, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1860,7 +1837,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1869,7 +1845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27aead57e412b164eb9a970343a0808d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1944,7 +1920,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1953,7 +1928,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb3b0edca3b24e54c99dc0381c7f83eb, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2009,8 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b3d672f0cbdae4c946f07b2ce076f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 0
-  moduleContainers: {fileID: 321446238}
+  moduleComponetList: {fileID: 0}
   interactionTypes:
     list:
     - {fileID: 11400000, guid: c23ad497a5be76249bafc124eaa24fd7, type: 2}
@@ -2023,20 +1997,20 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e2e13f20ed445f047affe2e1ca12f692, type: 2}
     - {fileID: 11400000, guid: 7788ebe365481234d92b1fb0dd557b32, type: 2}
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   isFirstReset: 0
 --- !u!1 &1350703570
 GameObject:
@@ -2081,7 +2055,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2164,7 +2137,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2173,7 +2145,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb3b0edca3b24e54c99dc0381c7f83eb, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2229,8 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b3d672f0cbdae4c946f07b2ce076f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 0
-  moduleContainers: {fileID: 321446238}
+  moduleComponetList: {fileID: 0}
   interactionTypes:
     list:
     - {fileID: 11400000, guid: c23ad497a5be76249bafc124eaa24fd7, type: 2}
@@ -2243,20 +2214,20 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e2e13f20ed445f047affe2e1ca12f692, type: 2}
     - {fileID: 11400000, guid: 7788ebe365481234d92b1fb0dd557b32, type: 2}
     onItemAdded:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
     onItemRemoved:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
     onListCleared:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   isFirstReset: 0
 --- !u!1 &1436937599
 GameObject:
@@ -2441,33 +2412,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fce6dc9884b1f4586c712102c94c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  property:
-    debugging: 0
-    isConstant: 0
-    localProperty:
-      list: []
-      onItemAdded:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onItemRemoved:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-      onListCleared:
-        debugging: 0
-        onEventRaised:
-          m_PersistentCalls:
-            m_Calls: []
-    onLocalPropertyReassigned:
-      debugging: 0
-      onEventRaised:
-        m_PersistentCalls:
-          m_Calls: []
-    externalProperty:
-      referenceObject: {fileID: 0}
+  observableList:
+    list: []
+    onItemAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemReassigned:
+      m_PersistentCalls:
+        m_Calls: []
+    onItemRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    onListCleared:
+      m_PersistentCalls:
+        m_Calls: []
+    onListReassigned:
+      m_PersistentCalls:
+        m_Calls: []
   renderVisualization: 1
   updateRate: 0.1
 --- !u!1 &1904023505
@@ -2513,7 +2474,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2609,7 +2569,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2618,7 +2577,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27aead57e412b164eb9a970343a0808d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -401,7 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ef276a62efde54caff58b05ff633b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moduleGameObjects: []
 --- !u!1 &573373152
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +564,7 @@ MonoBehaviour:
     raisedDetectedInteractable:
       m_PersistentCalls:
         m_Calls: []
-  runContinuousDetection: 0
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
@@ -826,7 +825,7 @@ MonoBehaviour:
     raisedDetectedInteractable:
       m_PersistentCalls:
         m_Calls: []
-  runContinuousDetection: 0
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
@@ -1008,7 +1007,7 @@ MonoBehaviour:
     raisedDetectedInteractable:
       m_PersistentCalls:
         m_Calls: []
-  runContinuousDetection: 0
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
@@ -1345,7 +1344,7 @@ MonoBehaviour:
     raisedDetectedInteractable:
       m_PersistentCalls:
         m_Calls: []
-  runContinuousDetection: 0
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
@@ -1563,7 +1562,7 @@ MonoBehaviour:
     raisedDetectedInteractable:
       m_PersistentCalls:
         m_Calls: []
-  runContinuousDetection: 0
+  runContinuousDetection: 1
   interactablesInRange:
     list: []
     onItemAdded:
@@ -2079,7 +2078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ef276a62efde54caff58b05ff633b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moduleGameObjects: []
 --- !u!1 &1749587222
 GameObject:
   m_ObjectHideFlags: 0
