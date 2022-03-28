@@ -1,0 +1,19 @@
+{
+    "name": "com.hypergnosys.interaction-module",
+    "rootNamespace": "",
+    "references": [
+        "GUID:96dde5c6a633b9b4cbf9b550836d9ac1",
+        "GUID:7f3c6d9351acfd14d855b3bbf732e311",
+        "GUID:25003173d3df617498a9d7b778eab2e1",
+        "GUID:20c0b699528f9a441a6ea6bb77f9a812"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

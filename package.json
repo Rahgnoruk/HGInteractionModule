@@ -1,0 +1,28 @@
+{
+    "name": "com.hypergnosys.interaction-module",
+    "version": "1.0.0",
+    "displayName": "HGInteractionModule",
+    "description": "Components that work as sensors to handle interactions between GameObjects.",
+    "unity": "2020.3",
+    "unityRelease": "11f1",
+    "documentationUrl": "https://github.com/Rahgnoruk/HGInteractionModule",
+    "changelogUrl": "https://github.com/Rahgnoruk/HGInteractionModule",
+    "licensesUrl": "https://github.com/Rahgnoruk/HGInteractionModule",
+    "keywords": [
+      "HyperGnosys",
+      "Interaction Module"
+    ],
+    "author": {
+      "name": "Sergio Raimond",
+      "email": "sergio.raimond@hypergnosys.com",
+      "url": "https://www.hypergnosys.com"
+    },
+    "dependencies": {
+    },
+    "gitDependencies": {
+        "com.hypergnosys.core": "https://github.com/Rahgnoruk/HGCodeBaseCore",
+        "com.hypergnosys.physics-utilities": "https://github.com/Rahgnoruk/HGPhysicsUtilities",
+        "com.hypergnosys.editor-utilities": "https://github.com/Rahgnoruk/HGEditorUtilities",
+        "com.hypergnosys.math-utilities": "https://github.com/Rahgnoruk/HGMathUtilities"
+      }
+  }
