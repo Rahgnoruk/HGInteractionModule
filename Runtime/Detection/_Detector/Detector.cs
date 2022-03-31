@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace HyperGnosys.InteractionModule
 {
-    public class ADetector : MonoBehaviour
+    public class Detector : MonoBehaviour
     {
         [SerializeField] private bool debugging = false;
         [Header("Detection")]

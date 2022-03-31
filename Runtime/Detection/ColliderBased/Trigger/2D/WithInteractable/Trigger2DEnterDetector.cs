@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HyperGnosys.InteractionModule
 {
-    public class Trigger2DEnterDetector : ADetector
+    public class Trigger2DEnterDetector : Detector
     {
         [Tooltip("If true, will remove objects that enter the collider instead of adding them")]
         [SerializeField] private bool removeFromList = false;

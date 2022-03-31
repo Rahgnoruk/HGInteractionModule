@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace HyperGnosys.InteractionModule
 {
-    public class CollisionEnterDetector : ADetector
+    public class CollisionEnterDetector : Detector
     {
         [Tooltip("If true, will remove objects that enter the collider instead of adding them")]
         [SerializeField] private bool removeFromList = false;

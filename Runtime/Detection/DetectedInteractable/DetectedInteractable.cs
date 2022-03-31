@@ -10,7 +10,7 @@ namespace HyperGnosys.InteractionModule
     {
         [SerializeField] private InteractableTag interactable;
         [SerializeField] private ObservableList<InteractionType> interactionTypeMatches = new ObservableList<InteractionType>();
-        [SerializeField] private ObservableList<ADetector> detectingDetectors = new ObservableList<ADetector>();
+        [SerializeField] private ObservableList<Detector> detectingDetectors = new ObservableList<Detector>();
         private UnityEvent<DetectedInteractable> onInteractableInteractionTypesChanged = new UnityEvent<DetectedInteractable>();
         private UnityEvent onUndetected = new UnityEvent();
         public DetectedInteractable(InteractableTag interactable)
@@ -32,6 +32,6 @@ namespace HyperGnosys.InteractionModule
         public ObservableList<InteractionType> InteractionTypeMatches { get => interactionTypeMatches; }
         public UnityEvent OnUndetected { get => onUndetected; }
         public UnityEvent<DetectedInteractable> OnInteractableInteractionTypesChanged { get => onInteractableInteractionTypesChanged; }
-        public ObservableList<ADetector> DetectingDetectors { get => detectingDetectors; }
+        public ObservableList<Detector> DetectingDetectors { get => detectingDetectors; }
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace HyperGnosys.InteractionModule
 {
-    public class Collision2DDetector : ADetector
+    public class Collision2DDetector : Detector
     {
         [Tooltip("If true, it will register exiting objects and remove entering ones")]
         [SerializeField] private bool registerExiting = false;

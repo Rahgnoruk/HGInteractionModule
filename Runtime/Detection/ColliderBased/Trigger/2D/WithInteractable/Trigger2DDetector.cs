@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HyperGnosys.InteractionModule
 {
-    public class Trigger2DDetector : ADetector
+    public class Trigger2DDetector : Detector
     {
         [Tooltip("If true, it will register exiting objects and remove entering ones instead of the other way around")]
         [SerializeField] private bool registerExiting = false;

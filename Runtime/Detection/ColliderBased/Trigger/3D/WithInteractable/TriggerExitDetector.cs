@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace HyperGnosys.InteractionModule
 {
-    public class TriggerExitDetector : ADetector
+    public class TriggerExitDetector : Detector
     {
         [Tooltip("If true, will add objects that exit the collider instead of removing them")]
         [SerializeField] private bool addToList = false;

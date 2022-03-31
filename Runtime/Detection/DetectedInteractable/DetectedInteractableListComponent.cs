@@ -23,7 +23,7 @@ namespace HyperGnosys.InteractionModule
             {
                 foreach (DetectedInteractable detectedInteractable in List)
                 {
-                    foreach (ADetector detector in detectedInteractable.DetectingDetectors.List)
+                    foreach (Detector detector in detectedInteractable.DetectingDetectors.List)
                     {
                         HGDebug.DrawLine(detector.transform.position, detectedInteractable.Interactable.transform.position,
                             true, Color.red, updateRate);

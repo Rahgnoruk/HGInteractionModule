@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HyperGnosys.InteractionModule
 {
-    public class ARaycastBasedDetector : ADetector
+    public class ARaycastBasedDetector : Detector
     {
         [SerializeField] private LayerMask targetLayerMask;
         [SerializeField, HideInInspector] private bool isFirstReset = true;
